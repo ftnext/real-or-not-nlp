@@ -1,10 +1,6 @@
 import csv
-from pathlib import Path
 
-ROOT_DIR = Path(__file__).parent.parent
-DATA_DIR = ROOT_DIR / "data"
-TRAIN_DATA_PATH = DATA_DIR / "train.csv"
-TEST_DATA_PATH = DATA_DIR / "test.csv"
+import constants
 
 
 def percentage(target_count, all_count):
@@ -12,10 +8,10 @@ def percentage(target_count, all_count):
 
 
 if __name__ == "__main__":
-    with open(TRAIN_DATA_PATH) as f:
+    with open(constants.TRAIN_DATA_PATH) as f:
         # id,keyword,location,text,target
         train_rows = list(csv.DictReader(f))
-    with open(TEST_DATA_PATH) as f:
+    with open(constants.TEST_DATA_PATH) as f:
         # id,keyword,location,text
         test_rows = list(csv.DictReader(f))
 
