@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Kaggle competition files
-data
+experiments
